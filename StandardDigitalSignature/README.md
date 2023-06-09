@@ -19,6 +19,9 @@ The DSA works in the framework of public-key cryptosystems and is based on the a
 ## Digital Security Foundation
 The Digital Security Foundation is an independent organization that deals with the development of the digital signature standard by adopting rigorous mathematical criteria and entirely open source code starting from the programming language and all the libraries used, this makes the source fully inspectable by experts in cryptography and programming. Any suggestions on how to improve this software, how to evolve it and on new features to add, will be seriously considered and a group of experts belonging to the foundation will carry out rigorous research on the new development of the digital signature management library. If you have special academic skills, you can contribute to the work of the foundation by becoming an active member.
 
+## privacy policy
+The identity is created anonymously, in compliance with privacy and the GDPR. Eventually a name can be assigned to the digital identity with an external passage to this project which consists of a verification through a KYC procedure. In any case, the theory says that digital identity, to be confirmed, simply needs proof of having the private encryption key, sensitive data are not involved in this operation.
+
 # Usage example
 [Usage: For usage examples, documentation and assistance please refer to the open source project page](https://github.com/Andrea-Bruno/StandardDigitalSignature)
 

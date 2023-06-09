@@ -14,7 +14,14 @@ The National Institute of Standards and Technology (NIST) proposed DSA for use i
 The DSA works in the framework of public-key cryptosystems and is based on the algebraic properties of modular exponentiation, together with the discrete logarithm problem, which is considered to be computationally intractable. The algorithm uses a key pair consisting of a public key and a private key. The private key is used to generate a digital signature for a message, and such a signature can be verified by using the signer's corresponding public key. The digital signature provides message authentication (the receiver can verify the origin of the message), integrity (the receiver can verify that the message has not been modified since it was signed) and non-repudiation (the sender cannot falsely claim that they have not signed the message). 
 
 [Digital Signature Standard (DSS) - technical documentation](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf)
+
 [(FIPS) compliance](https://learn.microsoft.com/en-us/dotnet/standard/security/fips-compliance)
+
+## Digital Security Foundation
+The Digital Security Foundation is an independent organization that deals with the development of the digital signature standard by adopting rigorous mathematical criteria and entirely open source code starting from the programming language and all the libraries used, this makes the source fully inspectable by experts in cryptography and programming. Any suggestions on how to improve this software, how to evolve it and on new features to add, will be seriously considered and a group of experts belonging to the foundation will carry out rigorous research on the new development of the digital signature management library. If you have special academic skills, you can contribute to the work of the foundation by becoming an active member.
+
+## privacy policy
+The identity is created anonymously, in compliance with privacy and the GDPR. Eventually a name can be assigned to the digital identity with an external passage to this project which consists of a verification through a KYC procedure. In any case, the theory says that digital identity, to be confirmed, simply needs proof of having the private encryption key, sensitive data are not involved in this operation.
 
 ## What is a digital identity?
 The identity is a cryptographic identity which consists in the possession of a pair of cryptographic keys (public and private) for asymmetric cryptography, the private key is technically the essential part of the identity, it allows to sign documents and the theft of the same corresponds to the theft of the digital identity, for this reason it must be kept in a safe way, for this purpose this project uses the secure storage library.
