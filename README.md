@@ -1,6 +1,6 @@
 # Standard Digital Signature
-Easy-to-use library for creating digital identities based on document encryption and digital signature.
-The standard digital signature project has a universal target, and can be run on both Linux and Windows systems on x86, x64 and ARM platforms
+Easy-to-use library for creating digital identities based on encryption and digital signature of document and validation of signatures.
+The standard digital signature project has a universal target, and can be run on both Linux and Windows systems on x86, x64 and ARM platforms.
 In this solution there are two projects, running on both linux and windows systems, the first consists of a library that allows the creation of cryptographic digital identities and to sign documents and validate the signatures issued by any user. The library is the essential part of the digital identity and signature software. The second project is a web interface that allows a user to interact with the library to affix digital signatures or proceed with the validation of digital signatures affixed by other users.
 
 ## What is a digital identity?
