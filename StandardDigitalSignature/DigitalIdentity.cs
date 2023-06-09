@@ -24,7 +24,7 @@ namespace StandardDigitalSignature
             }
             else
             {
-                mnemo = new Mnemonic(passphrase, Wordlist.AutoDetect(passphrase));
+                mnemo = new Mnemonic(Wordlist.English);
             }
             var hdRoot = mnemo.DeriveExtKey();
             PrivateKey = hdRoot.PrivateKey;

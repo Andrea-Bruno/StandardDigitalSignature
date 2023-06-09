@@ -32,10 +32,11 @@
     DigitalSignature.Scope Scope;
     private async Task LoadFiles(InputFileChangeEventArgs e)
     {
-            using (var fr = e.File.OpenReadStream(e.File.Size))
+        Console.WriteLine(e.File.Name);
+        using (var fr = e.File.OpenReadStream(e.File.Size))
             {
                 var data = new byte[e.File.Size];
-                await fr.ReadAsync(data, 0, (int)e.File.Size);
+                await fr.ReadAsync(data, 0, (int)e.File.Size);            
                 var json = DigitalIdentity.SignDocument(Scope, out SignatureFileName, e.File.Name, data);
                 JsonBase64 = Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(json));
             }
