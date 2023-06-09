@@ -9,22 +9,25 @@ namespace StandardDigitalSignature
     /// The digital identity using the technology derived from bitcoin wallets is anonymous, it is based on the concept that the owner of the digital identity can demonstrate at any time that he is in possession of this identity by affixing a signature.
     /// It is possible to transform the anonymous digital identity into an authenticated identity, in which case the holder of the signature must undergo a KYC procedure, during which he will have to affix the digital signature in order to be able to demonstrate that he is in possession of the private key.
     /// The digital identity ID is formed from the public key, which by convention can be transcribed in base64 or hexadecimal format.
+    /// For help and support you can ask here https://github.com/Andrea-Bruno/StandardDigitalSignature/issues
     /// </summary>
     static public class DigitalIdentity
     {
         static DigitalIdentity()
         {
-            var SecureStorage = new Storage(nameof(DigitalIdentity));
-            var passphrase = SecureStorage.Values.Get("passphrase", null);
+            SecureStorage = new Storage(nameof(DigitalIdentity));
+            var passphrase = Passphrase;
             Mnemonic mnemo;
             if (passphrase != null)
             {
-                mnemo = new Mnemonic(Wordlist.English);
-                SecureStorage.Values.Set("passphrase", string.Join(" ", mnemo.Words));
+                // Restore the pre-existing digital identity
+                mnemo = new Mnemonic(passphrase, Wordlist.English);
             }
             else
             {
+                // Generate a new digital identity
                 mnemo = new Mnemonic(Wordlist.English);
+                Passphrase = string.Join(" ", mnemo.Words);
             }
             var hdRoot = mnemo.DeriveExtKey();
             PrivateKey = hdRoot.PrivateKey;
@@ -32,7 +35,10 @@ namespace StandardDigitalSignature
 
         }
         static readonly Storage SecureStorage;
-
+        /// <summary>
+        /// The passphrase allows you to export and import your attention identity. Be careful, the theft of these words involves the theft of the digital identity!
+        /// </summary>
+        static public string Passphrase { get { return SecureStorage.Values.Get(nameof(Passphrase), null); } set { SecureStorage.Values.Set(nameof(Passphrase), string.Join(" ", value)); } } 
         static readonly Key PrivateKey;
         static readonly PubKey PublicKey;
 

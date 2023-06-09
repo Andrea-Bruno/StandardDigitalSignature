@@ -11,6 +11,7 @@ namespace StandardDigitalSignature
 {
     /// <summary>
     /// Class that represents the digital signature on a file
+    /// For help and support you can ask here https://github.com/Andrea-Bruno/StandardDigitalSignature/issues
     /// </summary>
     public class DigitalSignature
     {

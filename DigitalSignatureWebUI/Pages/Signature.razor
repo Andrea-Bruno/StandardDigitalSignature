@@ -5,20 +5,23 @@
 @using StandardDigitalSignature
 
 <h1>Digital signature of documents</h1>
-
 <br />
-    <div class="form-group m-3">
-        <label for="scope">Choose the reason why to put the signature:</label>
-        <select id="scope" @onchange=ChangeSelectScope>
-            <option selected="selected" value="Accept">Accept (Sign the document and I accept)</option>
-            <option value="Reject">Raject (he document has been submitted to me but I do not approve it)</option>
-            <option value="Viewed">Viewed (I have viewed the document without accepting or rejecting it)</option>
-        </select>
-    </div>
-    <div class="form-group m-3">
-        <label for="myfile">Select a PDF file to sign:</label>
-        <InputFile OnChange="@LoadFiles" accept=".pdf" multiple />
-    </div>
+<p>
+    This is the public key of your digital identity: <b>@DigitalIdentity.DigitalId</b>
+</p>
+<br />
+<div class="form-group m-3">
+    <label for="scope">Choose the reason why to put the signature:</label>
+    <select id="scope" @onchange=ChangeSelectScope>
+        <option selected="selected" value="Accept">Accept (Sign the document and I accept)</option>
+        <option value="Reject">Raject (he document has been submitted to me but I do not approve it)</option>
+        <option value="Viewed">Viewed (I have viewed the document without accepting or rejecting it)</option>
+    </select>
+</div>
+<div class="form-group m-3">
+    <label for="myfile">Select a PDF file to sign:</label>
+    <InputFile OnChange="@LoadFiles" accept=".pdf" multiple />
+</div>
 <br />
 
 @if (JsonBase64 != null)
@@ -34,12 +37,12 @@
     {
         Console.WriteLine(e.File.Name);
         using (var fr = e.File.OpenReadStream(e.File.Size))
-            {
-                var data = new byte[e.File.Size];
-                await fr.ReadAsync(data, 0, (int)e.File.Size);            
-                var json = DigitalIdentity.SignDocument(Scope, out SignatureFileName, e.File.Name, data);
-                JsonBase64 = Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(json));
-            }
+        {
+            var data = new byte[e.File.Size];
+            await fr.ReadAsync(data, 0, (int)e.File.Size);
+            var json = DigitalIdentity.SignDocument(Scope, out SignatureFileName, e.File.Name, data);
+            JsonBase64 = Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(json));
+        }
     }
     private void ChangeSelectScope(ChangeEventArgs args)
     {
