@@ -7,7 +7,7 @@
 		<Description>Easy-to-use library for creating digital identities based on encryption and digital signature of document and validation of signatures.</Description>
 		<Version>$([System.DateTime]::Now.ToString("1.yy.MM.dd"))</Version>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-		<PackageTags>digital signature; signature; sign; digital sign, signature validation, pdf signature, document signature</PackageTags>
+		<PackageTags>digital signature;signature;sign;digital sign;signature validation;pdf signature;document signature;fips,DSS,qualified electronic signature,QES,DSA,Digital Signature Algorithm</PackageTags>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageProjectUrl>https://www.nuget.org/packages/StandardDigitalSignature/</PackageProjectUrl>
 	</PropertyGroup>
