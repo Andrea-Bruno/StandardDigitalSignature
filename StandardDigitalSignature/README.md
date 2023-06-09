@@ -21,6 +21,9 @@ The Digital Security Foundation is an independent organization that deals with t
 # Usage example
 [Usage: For usage examples, documentation and assistance please refer to the open source project page](https://github.com/Andrea-Bruno/StandardDigitalSignature)
 
+# API documentation
+[Technical documentation for developers: Description of functions and methods implemented in the library](https://www.fuget.org/packages/StandardDigitalSignature)
+
 # NOTE:
 
 ## 1) Sign a document
