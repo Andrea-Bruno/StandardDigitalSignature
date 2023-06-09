@@ -19,7 +19,12 @@ The standard digital signature is not placed directly on the document to be sign
 The digital signature has a version number that will be increased with each new introduction of new features. In this way the validation software will mark the verification criteria based on the version used to make the digital signature, and if new features have been introduced these will be active without affecting the compatibility of signed documents with older versions of the software.
 The working group for the maintenance and development of the "digital signature standard". works continuously by introducing new features required by the market and by individual states, this means that the software will always be able to cover new needs and comply with the highest safety standards.
 
+## Bitcoin technology
+This project derives from the bitcoin technology and inherits from it the level of security, and the possibility of restoring the client-side account using the passphrase (exactly as happens for bitcoin wallets). Just as with bitcoin wallets, the accounts are client-side only, consisting of a private key, and there is no dependency on any backend to be executed).
+
 ## Usage examples
 The DigitalSignatureWebUI project has two examples of using the standard library for digital signatures:
 The Signature.razor file shows the programmer how to sign a document.
 The SignatureValidation.razor file is a practical example of how to proceed with the validation of the signature on a document: First you need to select the original document, then the signature file and then proceed with the validation.
+
+
