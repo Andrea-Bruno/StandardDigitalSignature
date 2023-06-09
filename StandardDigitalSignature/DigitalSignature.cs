@@ -193,6 +193,7 @@ namespace StandardDigitalSignature
         }
         /// <summary>
         /// Valid reasons for signing (purpose of signing)
+        /// The digital signature can be applied not only to sign a document, but also for different reasons. Based on the motivation for the signature, the legal value of a document has different connotations.
         /// </summary>
         public enum Scope : byte
         {
