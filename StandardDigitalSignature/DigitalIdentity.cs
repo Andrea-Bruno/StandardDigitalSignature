@@ -12,7 +12,7 @@ namespace StandardDigitalSignature
     /// It is possible to transform the anonymous digital identity into an authenticated identity, in which case the holder of the signature must undergo a KYC procedure, during which he will have to affix the digital signature in order to be able to demonstrate that he is in possession of the private key.
     /// The digital identity ID is formed from the public key, which by convention can be transcribed in base64 or hexadecimal format.
     /// For help and support you can ask here https://github.com/Andrea-Bruno/StandardDigitalSignature/issues
-    /// privacy policy: The identity is created anonymously, in compliance with privacy and the GDPR.Eventually a name can be assigned to the digital identity with an external passage to this project which consists of a verification through a KYC procedure. In any case, the theory says that digital identity, to be confirmed, simply needs proof of having the private encryption key, sensitive data are not involved in this operation.
+    /// Privacy policy: The identity is created anonymously, in compliance with privacy and the GDPR.Eventually a name can be assigned to the digital identity with an external passage to this project which consists of a verification through a KYC procedure. In any case, the theory says that digital identity, to be confirmed, simply needs proof of having the private encryption key, sensitive data are not involved in this operation.
     /// </summary>
     static public class DigitalIdentity
     {

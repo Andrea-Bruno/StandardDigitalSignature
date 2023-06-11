@@ -20,7 +20,10 @@ The DSA works in the framework of public-key cryptosystems and is based on the a
 ## Digital Security Foundation
 The Digital Security Foundation is an independent organization that deals with the development of the digital signature standard by adopting rigorous mathematical criteria and entirely open source code starting from the programming language and all the libraries used, this makes the source fully inspectable by experts in cryptography and programming. Any suggestions on how to improve this software, how to evolve it and on new features to add, will be seriously considered and a group of experts belonging to the foundation will carry out rigorous research on the new development of the digital signature management library. If you have special academic skills, you can contribute to the work of the foundation by becoming an active member.
 
-## privacy policy
+## DSS candidate
+The foundation for digital security, a free and independent NGO, proposes this software solution as a new candidate for the standard DSS adopted by the European Union, as it offers objective advantages: Simplicity of use, mass adoption worldwide, no cost to the community and for the European Union as the development is not supported by national funds but is based on voluntary work, and the use of an underlying completely open source and free environment (the dispute between Google and Oracle on Java has shown how much Java is bound to proprietary solutions ). The main purpose of this library is to replace the vague and confusing solutions, with more modern and scalable technologies, compatible with the eIDAS regulation.
+
+## Privacy policy
 The identity is created anonymously, in compliance with privacy and the GDPR. Eventually a name can be assigned to the digital identity with an external passage to this project which consists of a verification through a KYC procedure. In any case, the theory says that digital identity, to be confirmed, simply needs proof of having the private encryption key, sensitive data are not involved in this operation.
 
 ## What is a digital identity?
